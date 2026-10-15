@@ -3,121 +3,522 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leandro Costa | Portfólio</title>
-<meta name="description" content="Portfólio de Leandro Costa, estudante de Ciência da Computação.">
+<title>Leandro Costa | Portfólio – Análise de Dados e Desenvolvimento Web</title>
+<meta name="description" content="Portfólio de Leandro Costa, estudante de Ciência da Computação apaixonado por Análise de Dados, Power BI, Python e Desenvolvimento Web.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leandro Costa | Portfólio">
+<meta property="og:description" content="Análise de Dados, Power BI, Python e Desenvolvimento Web.">
+<meta property="og:image" content="foto.jpg">
 <meta name="theme-color" content="#0B1120">
+<meta name="color-scheme" content="dark">
+
 <style>
 :root {
-  --cy:#38BDF8;
-  --cy2:#06B6D4;
-  --bl:#2563EB;
-  --bg:#0B1120;
-  --bg2:#0F172A;
-  --tx:#94A3B8;
-  --bd:rgba(148,163,184,.18);
+  --cy: #38BDF8;
+  --cy2: #06B6D4;
+  --bl: #2563EB;
+  --bl2: #3B82F6;
+  --bg: #0B1120;
+  --bg2: #0F172A;
+  --tx: #94A3B8;
+  --glass: rgba(255,255,255,.05);
+  --bd: rgba(148,163,184,.18);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;background:var(--bg)}
-body{
-  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
-  color:var(--tx);line-height:1.7;
-  background:radial-gradient(60vw 60vw at 90% -5%,rgba(37,99,235,.28),transparent 60%),
-  radial-gradient(50vw 50vw at -10% 35%,rgba(6,182,212,.16),transparent 60%),
-  linear-gradient(180deg,var(--bg),var(--bg2));
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1080px;margin:auto;padding:0 20px}
-section{padding:76px 0}
-h1,h2,h3{color:white}
-h2{font-size:2rem;margin-bottom:28px}
-header{
-  position:sticky;top:0;z-index:10;
-  background:rgba(11,17,32,.9);
-  border-bottom:1px solid var(--bd);
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+  background: var(--bg);
 }
-.bar{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:16px}
-.logo{font-weight:800;color:white;font-size:1.15rem}
-.logo span,h1 em{color:var(--cy)}
-nav ul{display:flex;list-style:none;gap:18px;font-size:.9rem}
-nav a:hover{color:var(--cy)}
-.lang{display:flex;gap:4px}
-.lang button{
-  padding:6px 12px;border:1px solid var(--bd);
-  border-radius:20px;background:transparent;color:white;cursor:pointer
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--tx);
+  line-height: 1.7;
+  background:
+    radial-gradient(60vw 60vw at 90% -5%, rgba(37,99,235,.28), transparent 60%),
+    radial-gradient(50vw 50vw at -10% 35%, rgba(6,182,212,.16), transparent 60%),
+    radial-gradient(60vw 60vw at 100% 80%, rgba(37,99,235,.2), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg2));
+  background-attachment: fixed;
 }
-.lang button[aria-pressed=true]{background:var(--bl)}
-.menu-links{display:flex;gap:18px;overflow-x:auto;padding-bottom:10px;font-size:.85rem}
-.menu-links a{white-space:nowrap}
-.hero{padding:70px 0}
-.hero .wrap{display:grid;gap:40px;align-items:center}
-.ring{
-  width:min(300px,75vw);aspect-ratio:1;border-radius:50%;padding:5px;
-  background:conic-gradient(var(--cy),var(--bl),var(--cy2),var(--cy));
-  box-shadow:0 0 45px rgba(56,189,248,.35);
-  justify-self:center;
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
-.photo{
-  width:100%;height:100%;border-radius:50%;object-fit:cover;
-  object-position:50% 20%;border:5px solid var(--bg);display:block
+
+:focus-visible {
+  outline: 3px solid var(--cy);
+  outline-offset: 2px;
 }
-h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.15;margin-bottom:18px}
-.sub{font-size:1.05rem;margin-bottom:25px;max-width:600px}
-.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;
-  padding:12px 20px;border-radius:12px;font-weight:600;
-  border:1px solid var(--cy);color:white
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-.btn.p{background:linear-gradient(135deg,var(--cy),var(--cy2));color:#04141F;border:0}
-.btn.s{background:rgba(255,255,255,.05)}
-article.card,.about article{
-  background:rgba(255,255,255,.04);border:1px solid var(--bd);
-  border-radius:16px;padding:24px
+
+section {
+  padding: 76px 0;
 }
-.about p{margin-bottom:14px}
-.grid{display:grid;gap:18px}
-.g2,.g3,.g5{grid-template-columns:1fr}
-.card h3{margin-bottom:10px}
-.ic{font-size:1.5rem;margin-bottom:12px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.tags span{
-  padding:4px 10px;border-radius:20px;
-  background:rgba(37,99,235,.2);color:#BAE6FD;font-size:.85rem
+
+h1, h2, h3 {
+  color: #fff;
 }
-.cat{color:var(--cy);margin:22px 0 14px}
-.proj p{margin:10px 0 18px}
-.badge{font-size:.8rem;color:var(--cy);margin-bottom:8px}
-.hob{text-align:center}
-.hob b{display:block;font-size:2rem}
-.hob span{color:white;font-weight:600}
-.goal{
-  padding:30px;border-radius:18px;color:white;font-size:1.3rem;
-  background:linear-gradient(135deg,rgba(37,99,235,.35),rgba(6,182,212,.15));
-  border:1px solid var(--cy)
+
+h2 {
+  font-size: clamp(1.7rem, 4.5vw, 2.3rem);
+  margin-bottom: 30px;
+  letter-spacing: -.02em;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
-.contact{text-align:center}
-.contact h2{margin-bottom:15px}
-footer{border-top:1px solid var(--bd);text-align:center;padding:24px}
-@media(min-width:640px){
-  .g2{grid-template-columns:repeat(2,1fr)}
-  .g5{grid-template-columns:repeat(3,1fr)}
+
+h2::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cy), transparent);
+  opacity: .5;
 }
-@media(min-width:860px){
-  nav ul{display:flex}
-  .menu-links{display:none}
-  .hero .wrap{grid-template-columns:1.3fr 1fr}
-  .ring{width:min(340px,100%)}
-  .g3{grid-template-columns:repeat(3,1fr)}
-  .g5{grid-template-columns:repeat(5,1fr)}
+
+h3 {
+  font-size: 1.15rem;
 }
-@media(max-width:859px){nav ul{display:none}}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(11,17,32,.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--bd);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 12px;
+}
+
+.logo {
+  font-weight: 800;
+  color: #fff;
+  font-size: 1.15rem;
+}
+
+.logo span {
+  color: var(--cy);
+  text-shadow: 0 0 18px rgba(56,189,248,.7);
+}
+
+nav ul {
+  display: none;
+  list-style: none;
+  gap: 24px;
+  font-size: .92rem;
+  font-weight: 500;
+}
+
+nav a {
+  transition: color .2s;
+}
+
+nav a:hover {
+  color: var(--cy);
+}
+
+.lang {
+  display: flex;
+  background: var(--glass);
+  border: 1px solid var(--bd);
+  border-radius: 99px;
+  padding: 3px;
+}
+
+.lang button {
+  border: 0;
+  background: none;
+  font-family: inherit;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: 5px 13px;
+  border-radius: 99px;
+  cursor: pointer;
+  color: var(--tx);
+  transition: .2s;
+}
+
+.lang button[aria-pressed="true"] {
+  background: linear-gradient(135deg, var(--cy2), var(--bl));
+  color: #fff;
+  box-shadow: 0 0 14px rgba(56,189,248,.5);
+}
+
+.menu-links {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 0 0 10px;
+  font-size: .85rem;
+  scrollbar-width: none;
+}
+
+.menu-links a {
+  white-space: nowrap;
+}
+
+.hero {
+  padding: 56px 0 80px;
+}
+
+.hero .wrap {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+/* FOTO: formato retangular para mostrar melhor a imagem inteira */
+.ring {
+  width: min(340px, 85vw);
+  aspect-ratio: 1;
+  border-radius: 24px;
+  padding: 5px;
+  background: conic-gradient(from 200deg, var(--cy), var(--bl), var(--cy2), var(--cy));
+  box-shadow: 0 0 40px rgba(56,189,248,.45), 0 0 90px rgba(37,99,235,.35);
+  justify-self: center;
+  order: -1;
+  transition: box-shadow .3s;
+}
+
+.ring:hover {
+  box-shadow: 0 0 60px rgba(56,189,248,.7), 0 0 120px rgba(37,99,235,.5);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 19px;
+  object-fit: contain;
+  object-position: center;
+  border: 5px solid var(--bg);
+  display: block;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 7.5vw, 3.6rem);
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  margin-bottom: 18px;
+}
+
+h1 em {
+  font-style: normal;
+  color: var(--cy);
+  text-shadow: 0 0 28px rgba(56,189,248,.55);
+}
+
+.sub {
+  font-size: 1.05rem;
+  max-width: 34em;
+  margin-bottom: 30px;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: .95rem;
+  border: 1px solid var(--cy);
+  transition: transform .15s, box-shadow .25s, background .25s;
+  color: #fff;
+}
+
+.btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.btn.p {
+  background: linear-gradient(135deg, var(--cy), var(--cy2));
+  color: #04141F;
+  border-color: transparent;
+  box-shadow: 0 0 22px rgba(56,189,248,.5);
+}
+
+.btn.p:hover {
+  box-shadow: 0 0 38px rgba(56,189,248,.85);
+  transform: translateY(-2px);
+}
+
+.btn.s {
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+}
+
+.btn.s:hover {
+  background: rgba(56,189,248,.15);
+  box-shadow: 0 0 22px rgba(56,189,248,.35);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: scale(.97);
+}
+
+.about p {
+  max-width: 68ch;
+  margin-bottom: 16px;
+}
+
+.about article {
+  background: var(--glass);
+  border: 1px solid var(--bd);
+  border-left: 3px solid var(--cy);
+  border-radius: 16px;
+  padding: 26px;
+  backdrop-filter: blur(10px);
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.card {
+  background: var(--glass);
+  border: 1px solid var(--bd);
+  border-radius: 18px;
+  padding: 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--cy);
+  box-shadow: 0 0 30px rgba(56,189,248,.28), inset 0 0 24px rgba(37,99,235,.12);
+}
+
+.ic {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, rgba(6,182,212,.3), rgba(37,99,235,.3));
+  border: 1px solid var(--bd);
+  margin-bottom: 14px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.tags span {
+  background: rgba(37,99,235,.2);
+  border: 1px solid rgba(59,130,246,.4);
+  color: #BAE6FD;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: .82rem;
+  font-weight: 600;
+}
+
+.proj {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(160deg, rgba(15,23,42,.9), rgba(11,17,32,.9));
+  border-color: rgba(59,130,246,.45);
+  box-shadow: 0 0 18px rgba(37,99,235,.18);
+}
+
+.cat {
+  margin: 6px 0 16px;
+  font-size: 1.05rem;
+  color: var(--cy);
+}
+
+.grid + .cat {
+  margin-top: 40px;
+}
+
+.proj p {
+  margin: 10px 0 20px;
+}
+
+.proj .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.badge {
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--cy);
+  margin-bottom: 8px;
+}
+
+.btn.off {
+  opacity: .5;
+  border-style: dashed;
+  pointer-events: none;
+  background: none;
+  box-shadow: none;
+  color: var(--tx);
+}
+
+.hob {
+  text-align: center;
+  padding: 22px 14px;
+}
+
+.hob b {
+  display: block;
+  font-size: 2.2rem;
+  margin-bottom: 6px;
+  transition: transform .25s;
+}
+
+.hob:hover b {
+  transform: scale(1.18) rotate(-6deg);
+}
+
+.hob span {
+  font-weight: 600;
+  color: #fff;
+  font-size: .93rem;
+  line-height: 1.4;
+  display: block;
+}
+
+.goal {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 40px 28px;
+  color: #fff;
+  font-size: clamp(1.15rem, 3vw, 1.55rem);
+  line-height: 1.5;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(37,99,235,.35), rgba(6,182,212,.18));
+  border: 1px solid var(--cy);
+  box-shadow: 0 0 40px rgba(56,189,248,.25), inset 0 0 50px rgba(56,189,248,.08);
+}
+
+.goal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,.07) 50%, transparent 60%);
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  max-width: 46ch;
+  margin: 0 auto 26px;
+}
+
+.contact h2 {
+  justify-content: center;
+}
+
+.contact h2::after {
+  display: none;
+}
+
+.contact .btns {
+  justify-content: center;
+}
+
+footer {
+  border-top: 1px solid var(--bd);
+  text-align: center;
+  padding: 24px 20px;
+  font-size: .85rem;
+}
+
+@media(min-width:640px) {
+  .g2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .g5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(min-width:860px) {
+  nav ul {
+    display: flex;
+  }
+
+  .menu-links {
+    display: none;
+  }
+
+  .hero .wrap {
+    grid-template-columns: 1.3fr 1fr;
+  }
+
+  .ring {
+    order: 0;
+    width: min(340px, 100%);
+  }
+
+  .g3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .g5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
 </style>
 </head>
+
 <body>
 <header>
   <div class="wrap">
     <div class="bar">
       <a href="#inicio" class="logo">Leandro <span>Costa</span></a>
+
       <nav aria-label="Principal">
         <ul>
           <li><a href="#sobre" data-i="n1"></a></li>
@@ -128,11 +529,13 @@ footer{border-top:1px solid var(--bd);text-align:center;padding:24px}
           <li><a href="#contato" data-i="n6"></a></li>
         </ul>
       </nav>
-      <div class="lang">
+
+      <div class="lang" role="group" aria-label="Idioma / Language">
         <button data-l="pt" aria-pressed="true">PT</button>
         <button data-l="en" aria-pressed="false">EN</button>
       </div>
     </div>
+
     <div class="menu-links">
       <a href="#sobre" data-i="n1"></a>
       <a href="#habilidades" data-i="n2"></a>
@@ -145,202 +548,302 @@ footer{border-top:1px solid var(--bd);text-align:center;padding:24px}
 </header>
 
 <main>
-<section class="hero" id="inicio">
-  <div class="wrap">
-    <div>
-      <h1><span data-i="hi"></span> <em>Leandro Costa</em></h1>
-      <p class="sub" data-i="sub"></p>
-      <div class="btns">
-        <a class="btn p" href="#projetos" data-i="cta1"></a>
-        <a class="btn s" id="wa1" href="#" target="_blank" rel="noopener" data-i="cta2"></a>
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div>
+        <h1><span data-i="hi"></span> <em>Leandro Costa</em></h1>
+        <p class="sub" data-i="sub"></p>
+
+        <div class="btns">
+          <a class="btn p" href="#projetos" data-i="cta1"></a>
+          <a class="btn s" id="wa1" href="#" target="_blank" rel="noopener" data-i="cta2"></a>
+        </div>
+      </div>
+
+      <div class="ring">
+        <img class="photo" src="foto.jpg" alt="Foto de Leandro Costa" width="340" height="340" fetchpriority="high">
       </div>
     </div>
-    <div class="ring">
-      <img class="photo" src="foto.jpg" alt="Foto de Leandro Costa" width="340" height="340">
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="about" id="sobre">
-  <div class="wrap">
-    <h2 data-i="n1"></h2>
-    <article>
-      <p data-i="a1"></p>
-      <p data-i="a2"></p>
-      <p data-i="a3"></p>
-      <p data-i="a4"></p>
-    </article>
-  </div>
-</section>
-
-<section id="habilidades">
-  <div class="wrap">
-    <h2 data-i="n2"></h2>
-    <div class="grid g3">
-      <article class="card">
-        <div class="ic">📊</div>
-        <h3 data-i="s1"></h3>
-        <div class="tags"><span>Power BI</span><span>Excel</span><span>Python</span><span>SQL</span></div>
-      </article>
-      <article class="card">
-        <div class="ic">💻</div>
-        <h3 data-i="s2"></h3>
-        <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
-      </article>
-      <article class="card">
-        <div class="ic">🤖</div>
-        <h3 data-i="s3"></h3>
-        <div class="tags"><span data-i="t1"></span><span data-i="t2"></span></div>
+  <section id="sobre" class="about">
+    <div class="wrap">
+      <h2 data-i="n1"></h2>
+      <article>
+        <p data-i="a1"></p>
+        <p data-i="a2"></p>
+        <p data-i="a3"></p>
+        <p data-i="a4"></p>
       </article>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="projetos">
-  <div class="wrap">
-    <h2 data-i="n3"></h2>
-    <h3 class="cat" data-i="c1"></h3>
-    <div class="grid g2">
-      <article class="card proj">
-        <div class="badge" data-i="b1"></div>
-        <h3 data-i="p1t"></h3>
-        <p data-i="p1d"></p>
-        <a class="btn p" href="https://app.powerbi.com/links/SkR7Re0sKo?ctid=f310b526-e195-4805-a55e-67e28f2fefdb&pbi_source=linkShare" target="_blank" rel="noopener" data-i="p1b"></a>
-      </article>
-      <article class="card proj">
-        <div class="badge" data-i="b2"></div>
-        <h3 data-i="p2t"></h3>
-        <p data-i="p2d"></p>
-        <a class="btn s" href="#" aria-disabled="true" data-i="p2b"></a>
-      </article>
-    </div>
-    <h3 class="cat" data-i="c2"></h3>
-    <div class="grid g2">
-      <article class="card proj">
-        <div class="badge" data-i="b3"></div>
-        <h3 data-i="p3t"></h3>
-        <p data-i="p3d"></p>
-        <a class="btn p" href="https://leandrocosta147.github.io/jogodavelha/" target="_blank" rel="noopener" data-i="p3b"></a>
-      </article>
-    </div>
-  </div>
-</section>
+  <section id="habilidades">
+    <div class="wrap">
+      <h2 data-i="n2"></h2>
 
-<section id="hobbies">
-  <div class="wrap">
-    <h2 data-i="n4"></h2>
-    <div class="grid g5">
-      <article class="card hob"><b>🎮</b><span data-i="h1"></span></article>
-      <article class="card hob"><b>📚</b><span data-i="h2"></span></article>
-      <article class="card hob"><b>🏋️</b><span data-i="h3"></span></article>
-      <article class="card hob"><b>🎬</b><span data-i="h4"></span></article>
-      <article class="card hob"><b>🍕</b><span data-i="h5"></span></article>
-    </div>
-  </div>
-</section>
+      <div class="grid g3">
+        <article class="card">
+          <div class="ic">📊</div>
+          <h3 data-i="s1"></h3>
+          <div class="tags">
+            <span>Power BI</span>
+            <span>Excel</span>
+            <span>Python</span>
+            <span>SQL</span>
+          </div>
+        </article>
 
-<section id="objetivos">
-  <div class="wrap">
-    <h2 data-i="n5"></h2>
-    <blockquote class="goal" data-i="goal"></blockquote>
-  </div>
-</section>
+        <article class="card">
+          <div class="ic">💻</div>
+          <h3 data-i="s2"></h3>
+          <div class="tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+          </div>
+        </article>
 
-<section class="contact" id="contato">
-  <div class="wrap">
-    <h2 data-i="n6"></h2>
-    <p data-i="ct"></p>
-    <div class="btns" style="justify-content:center">
-      <a class="btn p" id="wa2" href="#" target="_blank" rel="noopener" data-i="cta2"></a>
-      <a class="btn s" href="https://www.linkedin.com/in/leandro-costa-ara%C3%BAjo/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn s" href="https://www.instagram.com/leandro_costa147/" target="_blank" rel="noopener">Instagram</a>
+        <article class="card">
+          <div class="ic">🤖</div>
+          <h3 data-i="s3"></h3>
+          <div class="tags">
+            <span data-i="t1"></span>
+            <span data-i="t2"></span>
+          </div>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section id="projetos">
+    <div class="wrap">
+      <h2 data-i="n3"></h2>
+      <h3 class="cat" data-i="c1"></h3>
+
+      <div class="grid g2">
+        <article class="card proj">
+          <div class="badge" data-i="b1"></div>
+          <h3 data-i="p1t"></h3>
+          <p data-i="p1d"></p>
+          <a class="btn p" href="https://app.powerbi.com/links/SkR7Re0sKo?ctid=f310b526-e195-4805-a55e-67e28f2fefdb&pbi_source=linkShare" target="_blank" rel="noopener" data-i="p1b"></a>
+        </article>
+
+        <article class="card proj">
+          <div class="badge" data-i="b2"></div>
+          <h3 data-i="p2t"></h3>
+          <p data-i="p2d"></p>
+          <a class="btn p off" href="#" aria-disabled="true" data-i="p2b"></a>
+        </article>
+      </div>
+
+      <h3 class="cat" data-i="c2"></h3>
+
+      <div class="grid g2">
+        <article class="card proj">
+          <div class="badge" data-i="b3"></div>
+          <h3 data-i="p3t"></h3>
+          <p data-i="p3d"></p>
+          <a class="btn p" href="https://leandrocosta147.github.io/jogodavelha/" target="_blank" rel="noopener" data-i="p3b"></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="hobbies">
+    <div class="wrap">
+      <h2 data-i="n4"></h2>
+
+      <div class="grid g5">
+        <div class="card hob"><b>🎮</b><span data-i="h1"></span></div>
+        <div class="card hob"><b>📚</b><span data-i="h2"></span></div>
+        <div class="card hob"><b>🏋️</b><span data-i="h3"></span></div>
+        <div class="card hob"><b>🎬</b><span data-i="h4"></span></div>
+        <div class="card hob"><b>🍕</b><span data-i="h5"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="objetivos">
+    <div class="wrap">
+      <h2 data-i="n5"></h2>
+      <blockquote class="goal" data-i="goal"></blockquote>
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="wrap">
+      <h2 data-i="n6"></h2>
+      <p data-i="ct"></p>
+
+      <div class="btns">
+        <a class="btn p" id="wa2" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/>
+          </svg>
+          <span data-i="cta2"></span>
+        </a>
+
+        <a class="btn s" href="https://www.linkedin.com/in/leandro-costa-ara%C3%BAjo/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.8h4V21H3zM9.5 9.8h3.8v1.6c.6-1 2-1.9 4-1.9 4 0 4.7 2.6 4.7 6V21h-4v-4.8c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V21h-4z"/>
+          </svg>
+          LinkedIn
+        </a>
+
+        <a class="btn s" href="https://www.instagram.com/leandro_costa147/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm5.3-3.7a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer>© <span id="y"></span> Leandro Costa. <span data-i="rights"></span></footer>
+<footer>
+  © <span id="y"></span> Leandro Costa. <span data-i="rights"></span>
+</footer>
 
 <script>
-const T={
-pt:{
-n1:"Sobre Mim",n2:"Habilidades",n3:"Projetos",n4:"Hobbies",n5:"Objetivos",n6:"Contato",
-hi:"Olá, eu sou o",
-sub:"Estudante de Ciência da Computação | Apaixonado por Análise de Dados, Power BI, Python e Desenvolvimento Web",
-cta1:"Ver Projetos",cta2:"Falar no WhatsApp",
-a1:"Meu nome é Leandro Costa Araujo de Oliveira. Desde a infância, tenho grande interesse por tecnologia e informática. Ainda na adolescência, comecei a realizar manutenções em computadores, desenvolvendo conhecimentos práticos e fortalecendo minha paixão pela área.",
-a2:"Em 2023, iniciei minha graduação em Ciência da Computação na UNA, onde ampliei meus conhecimentos e descobri novos interesses, como Power BI, Python, análise de dados e inteligência artificial.",
-a3:"Atualmente, estou explorando ferramentas modernas para criação de sites e desenvolvimento web.",
-a4:"Meu objetivo é continuar aprendendo, aprimorando minhas habilidades e desenvolvendo soluções tecnológicas criativas, funcionais e inovadoras.",
-s1:"Análise de Dados",s2:"Desenvolvimento Web",s3:"IA e Hardware",
-t1:"Inteligência Artificial",t2:"Manutenção de Computadores",
-b1:"Trabalho acadêmico – UNA",b2:"Projeto de estudos",
-p1t:"Dashboard de Vendas Internacionais",
-p1d:"Projeto desenvolvido em grupo para a faculdade UNA a partir de uma base de dados de vendas em diferentes países. Atuei no tratamento de dados utilizando SQL e na criação de dashboards interativos no Power BI.",
-p1b:"Ver Dashboard no Power BI",
-p2t:"Projeto de Análise de Dados (Estudos)",
-p2d:"Dashboard analítico desenvolvido em ambiente de estudos práticos.",
-p2b:"Link em breve",
-c1:"Análise de Dados e BI",c2:"Desenvolvimento e Jogos (Python / Web)",
-b3:"Projeto web – GitHub Pages",
-p3t:"Jogo da Velha Interativo",
-p3d:"Projeto interativo hospedado via GitHub Pages, com lógica de programação e desenvolvimento web responsivo.",
-p3b:"Jogar / Testar Aplicação",
-h1:"Jogar videogames",h2:"Ler livros de ficção",
-h3:"Treinar, praticar lutas e correr",h4:"Assistir séries",
-h5:"Aproveitar boa comida, como pizza e macarrão",
-goal:"Atuar na área de Tecnologia, com foco em Análise de Dados, Inteligência Artificial, Criação de Sites e Desenvolvimento de Soluções Tecnológicas.",
-ct:"Tem um projeto, uma vaga ou quer trocar ideias? Me chame no WhatsApp ou nas redes sociais.",
-rights:"Todos os direitos reservados.",
-wa:"Olá, Leandro! Vi seu portfólio e gostaria de conversar.",
-title:"Leandro Costa | Portfólio – Análise de Dados e Desenvolvimento Web"
-},
-en:{
-n1:"About Me",n2:"Skills",n3:"Projects",n4:"Hobbies",n5:"Goals",n6:"Contact",
-hi:"Hi, I'm",
-sub:"Computer Science Student | Passionate about Data Analysis, Power BI, Python and Web Development",
-cta1:"View Projects",cta2:"Chat on WhatsApp",
-a1:"My name is Leandro Costa Araujo de Oliveira. Since childhood I have had a strong interest in technology and computing. As a teenager, I started repairing computers and building hands-on knowledge.",
-a2:"In 2023, I began my Computer Science degree at UNA, where I discovered interests such as Power BI, Python, data analysis and artificial intelligence.",
-a3:"I am exploring modern tools for website creation and web development.",
-a4:"My goal is to keep learning, sharpen my skills and build creative, functional and innovative technology solutions.",
-s1:"Data Analysis",s2:"Web Development",s3:"AI & Hardware",
-t1:"Artificial Intelligence",t2:"Computer Maintenance",
-b1:"Academic project – UNA",b2:"Study project",
-p1t:"Global Sales Dashboard",
-p1d:"A group project for UNA university. I worked on data preparation with SQL and created interactive dashboards in Power BI.",
-p1b:"View Dashboard on Power BI",
-p2t:"Data Analysis Project (Study)",p2d:"Analytical dashboard built in a hands-on study environment.",p2b:"Link coming soon",
-c1:"Data Analysis and BI",c2:"Development and Games (Python / Web)",
-b3:"Web project – GitHub Pages",p3t:"Tic-Tac-Toe Web App",
-p3d:"An interactive project hosted on GitHub Pages, demonstrating programming logic and responsive web development.",
-p3b:"Play / Try the App",
-h1:"Playing video games",h2:"Reading fiction books",
-h3:"Working out, martial arts and running",h4:"Watching series",
-h5:"Enjoying good food, like pizza and pasta",
-goal:"Work in Technology, focusing on Data Analysis, Artificial Intelligence, Website Creation and Technology Solutions.",
-ct:"Have a project, a job opening or just want to chat? Message me on WhatsApp or social media.",
-rights:"All rights reserved.",
-wa:"Hello, Leandro! I saw your portfolio and would like to talk.",
-title:"Leandro Costa | Portfolio – Data Analysis and Web Development"
-}
+const T = {
+  pt: {
+    n1: "Sobre Mim",
+    n2: "Habilidades",
+    n3: "Projetos",
+    n4: "Hobbies",
+    n5: "Objetivos",
+    n6: "Contato",
+    hi: "Olá, eu sou o",
+    sub: "Estudante de Ciência da Computação | Apaixonado por Análise de Dados, Power BI, Python e Desenvolvimento Web",
+    cta1: "Ver Projetos",
+    cta2: "Falar no WhatsApp",
+    a1: "Meu nome é Leandro Costa Araujo de Oliveira, nasci em Divinópolis, Minas Gerais, em 26 de abril de 2003. Desde a infância, tenho grande interesse por tecnologia e informática. Ainda na adolescência, comecei a realizar manutenções em computadores, desenvolvendo conhecimentos práticos e fortalecendo minha paixão pela área.",
+    a2: "Em 2023, iniciei minha graduação em Ciência da Computação na UNA, onde ampliei meus conhecimentos e descobri novos interesses, como Power BI, Python, análise de dados e inteligência artificial.",
+    a3: "Atualmente, estou me especializando em desenvolvimento de sites, explorando ferramentas modernas que facilitam a criação de páginas web e otimizam o processo de desenvolvimento.",
+    a4: "Meu objetivo é continuar aprendendo, aprimorando minhas habilidades e desenvolvendo soluções tecnológicas criativas, funcionais e inovadoras.",
+    s1: "Análise de Dados",
+    s2: "Desenvolvimento Web",
+    s3: "IA e Hardware",
+    t1: "Inteligência Artificial",
+    t2: "Manutenção de Computadores",
+    b1: "Trabalho acadêmico – UNA",
+    b2: "Projeto de estudos",
+    p1t: "Dashboard de Vendas Internacionais",
+    p1d: "Projeto desenvolvido em grupo para a faculdade UNA a partir de uma base de dados de vendas de produtos em diferentes países. Atuei diretamente no tratamento de dados utilizando SQL e fui o responsável por criar os dashboards interativos e visuais no Power BI.",
+    p1b: "Ver Dashboard no Power BI",
+    p2t: "Projeto de Análise de Dados (Estudos)",
+    p2d: "Dashboard analítico desenvolvido em ambiente de estudos práticos para consolidação de métricas, indicadores de desempenho e visualizações avançadas.",
+    p2b: "Link em breve",
+    c1: "Análise de Dados e BI",
+    c2: "Desenvolvimento e Jogos (Python / Web)",
+    b3: "Projeto web – GitHub Pages",
+    p3t: "Jogo da Velha Interativo",
+    p3d: "Projeto interativo desenvolvido e hospedado via GitHub Pages. Demonstra aplicação prática de lógica de programação, manipulação de estado e desenvolvimento web responsivo.",
+    p3b: "Jogar / Testar Aplicação",
+    h1: "Jogar videogames",
+    h2: "Ler livros de ficção",
+    h3: "Treinar, praticar lutas e correr",
+    h4: "Assistir séries",
+    h5: "Aproveitar boa comida, como pizza e macarrão",
+    goal: "Atuar na área de Tecnologia, com foco em Análise de Dados, Inteligência Artificial, Criação de Sites e Desenvolvimento de Soluções Tecnológicas.",
+    ct: "Tem um projeto, uma vaga ou quer trocar ideias? Me chame no WhatsApp ou nas redes sociais.",
+    rights: "Todos os direitos reservados.",
+    wa: "Olá, Leandro! Vi seu portfólio e gostaria de conversar.",
+    title: "Leandro Costa | Portfólio – Análise de Dados e Desenvolvimento Web"
+  },
+
+  en: {
+    n1: "About Me",
+    n2: "Skills",
+    n3: "Projects",
+    n4: "Hobbies",
+    n5: "Goals",
+    n6: "Contact",
+    hi: "Hi, I'm",
+    sub: "Computer Science Student | Passionate about Data Analysis, Power BI, Python and Web Development",
+    cta1: "View Projects",
+    cta2: "Chat on WhatsApp",
+    a1: "My name is Leandro Costa Araujo de Oliveira. I was born in Divinópolis, Minas Gerais, Brazil, on April 26, 2003. Since childhood I have had a strong interest in technology and computing. As a teenager, I started repairing computers, which built my hands-on knowledge and strengthened my passion for the field.",
+    a2: "In 2023, I began my Computer Science degree at UNA, where I expanded my knowledge and discovered new interests such as Power BI, Python, data analysis and artificial intelligence.",
+    a3: "I am currently specializing in website development, exploring modern tools that make building web pages easier and streamline the development process.",
+    a4: "My goal is to keep learning, sharpen my skills and build creative, functional and innovative technology solutions.",
+    s1: "Data Analysis",
+    s2: "Web Development",
+    s3: "AI & Hardware",
+    t1: "Artificial Intelligence",
+    t2: "Computer Maintenance",
+    b1: "Academic project – UNA",
+    b2: "Study project",
+    p1t: "Global Sales Dashboard",
+    p1d: "A group project for UNA university, built from a database of product sales across different countries. I worked directly on data preparation with SQL and was responsible for creating the interactive dashboards and visuals in Power BI.",
+    p1b: "View Dashboard on Power BI",
+    p2t: "Data Analysis Project (Study)",
+    p2d: "Analytical dashboard built in a hands-on study environment to consolidate metrics, performance indicators and advanced visualizations.",
+    p2b: "Link coming soon",
+    c1: "Data Analysis and BI",
+    c2: "Development and Games (Python / Web)",
+    b3: "Web project – GitHub Pages",
+    p3t: "Tic-Tac-Toe Web App",
+    p3d: "An interactive project built and hosted on GitHub Pages. It shows practical use of programming logic, state handling and responsive web development.",
+    p3b: "Play / Try the App",
+    h1: "Playing video games",
+    h2: "Reading fiction books",
+    h3: "Working out, martial arts and running",
+    h4: "Watching series",
+    h5: "Enjoying good food, like pizza and pasta",
+    goal: "Work in Technology, focusing on Data Analysis, Artificial Intelligence, Website Creation and the Development of Technology Solutions.",
+    ct: "Have a project, a job opening or just want to chat? Message me on WhatsApp or social media.",
+    rights: "All rights reserved.",
+    wa: "Hello, Leandro! I saw your portfolio and would like to talk.",
+    title: "Leandro Costa | Portfolio – Data Analysis and Web Development"
+  }
 };
-const $=s=>document.querySelectorAll(s);
-function setLang(l){
- const d=T[l];
- $("[data-i]").forEach(e=>e.textContent=d[e.dataset.i]);
- document.documentElement.lang=l==="pt"?"pt-BR":"en";
- document.title=d.title;
- const u="https://wa.me/5537999697307?text="+encodeURIComponent(d.wa);
- $("#wa1,#wa2").forEach(a=>a.href=u);
- $(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===l));
- try{localStorage.setItem("lang",l)}catch(e){}
+
+const $ = selector => document.querySelectorAll(selector);
+
+function setLang(lang) {
+  const data = T[lang];
+
+  $("[data-i]").forEach(element => {
+    element.textContent = data[element.dataset.i];
+  });
+
+  document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+  document.title = data.title;
+
+  const whatsappURL =
+    "https://wa.me/5537999697307?text=" + encodeURIComponent(data.wa);
+
+  $("#wa1, #wa2").forEach(link => {
+    link.href = whatsappURL;
+  });
+
+  $(".lang button").forEach(button => {
+    button.setAttribute("aria-pressed", button.dataset.l === lang);
+  });
+
+  try {
+    localStorage.setItem("lang", lang);
+  } catch (error) {}
 }
-$(".lang button").forEach(b=>b.onclick=()=>setLang(b.dataset.l));
-document.getElementById("y").textContent=new Date().getFullYear();
-let s="pt";
-try{s=localStorage.getItem("lang")||(navigator.language.startsWith("en")?"en":"pt")}catch(e){}
-setLang(s);
+
+$(".lang button").forEach(button => {
+  button.onclick = () => setLang(button.dataset.l);
+});
+
+document.getElementById("y").textContent = new Date().getFullYear();
+
+let language = "pt";
+
+try {
+  language =
+    localStorage.getItem("lang") ||
+    (navigator.language.startsWith("en") ? "en" : "pt");
+} catch (error) {}
+
+setLang(language);
 </script>
 </body>
 </html>
